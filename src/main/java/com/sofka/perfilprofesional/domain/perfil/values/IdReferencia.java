@@ -1,4 +1,6 @@
 package com.sofka.perfilprofesional.domain.perfil.values;
 
-public class IdReferencia {
+import co.com.sofka.domain.generic.Identity;
+
+public class IdReferencia extends Identity {
 }
