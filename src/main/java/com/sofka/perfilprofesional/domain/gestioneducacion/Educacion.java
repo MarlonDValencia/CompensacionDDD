@@ -11,7 +11,7 @@ import java.util.Objects;
 
 public class Educacion extends Entity<IdEducacion> {
     private final TipoEducacion tipoEducacion;
-    private final TipoEstudio tipoEstudio;
+    private TipoEstudio tipoEstudio;
     private final Institucion institucion;
     private final Periodo periodo;
 
@@ -21,6 +21,11 @@ public class Educacion extends Entity<IdEducacion> {
         this.tipoEstudio = Objects.requireNonNull(tipoEstudio);
         this.institucion = Objects.requireNonNull(institucion);
         this.periodo = Objects.requireNonNull(periodo);
+    }
+
+    public void modificarTipoEstudio(String tipoEstudio){
+        Objects.requireNonNull(tipoEstudio);
+        this.tipoEstudio = this.tipoEstudio.modificarTipoEstudio(tipoEstudio);
     }
 
     public TipoEducacion tipoEducacion() {

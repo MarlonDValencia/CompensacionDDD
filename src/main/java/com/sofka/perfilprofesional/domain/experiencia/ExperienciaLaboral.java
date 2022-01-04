@@ -11,13 +11,18 @@ import java.util.Objects;
 public class ExperienciaLaboral extends Entity<IdExperienciaLaboral> {
     private final Institucion institucion;
     private final Periodo periodo;
-    private final ConocimientosAdquiridos conocimientosAdquiridos;
+    private ConocimientosAdquiridos conocimientosAdquiridos;
 
     public ExperienciaLaboral(IdExperienciaLaboral idExperienciaLaboral, Institucion institucion, Periodo periodo, ConocimientosAdquiridos conocimientosAdquiridos) {
         super(idExperienciaLaboral);
         this.institucion = Objects.requireNonNull(institucion);
         this.periodo = Objects.requireNonNull(periodo);
         this.conocimientosAdquiridos = Objects.requireNonNull(conocimientosAdquiridos);
+    }
+
+    public void modificarConocimientosAdquiridos(String conocimientos){
+        Objects.requireNonNull(conocimientos);
+        this.conocimientosAdquiridos = this.conocimientosAdquiridos.modificarConocimientosAdquiridos(conocimientos);
     }
 
     public Institucion institucion() {

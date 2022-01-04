@@ -16,7 +16,10 @@ public class ExperienciaChange  extends EventChange {
 
         apply((ExperienciaLaboralAgregada event)-> {
             experiencia.experienciaLaboral.add(new ExperienciaLaboral(
-
+                    event.getIdExperienciaLaboral(),
+                    event.getInstitucion(),
+                    event.getPeriodo(),
+                    event.getConocimientosAdquiridos()
             ));
         });
 

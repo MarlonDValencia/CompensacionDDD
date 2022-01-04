@@ -5,10 +5,12 @@ import co.com.sofka.domain.generic.DomainEvent;
 import com.sofka.perfilprofesional.domain.experiencia.events.ExperienciaCreada;
 import com.sofka.perfilprofesional.domain.experiencia.events.ExperienciaLaboralAgregada;
 import com.sofka.perfilprofesional.domain.experiencia.events.ExperienciaLaboralEliminada;
+import com.sofka.perfilprofesional.domain.experiencia.values.ConocimientosAdquiridos;
 import com.sofka.perfilprofesional.domain.experiencia.values.IdExperiencia;
 import com.sofka.perfilprofesional.domain.experiencia.values.IdExperienciaLaboral;
 import com.sofka.perfilprofesional.domain.generics.IdHojaDeVida;
-import com.sofka.perfilprofesional.domain.gestioneducacion.values.IdEducacion;
+import com.sofka.perfilprofesional.domain.generics.Institucion;
+import com.sofka.perfilprofesional.domain.generics.Periodo;
 
 import java.util.List;
 import java.util.Set;
@@ -33,9 +35,9 @@ public class Experiencia extends AggregateEvent<IdExperiencia> {
         return experiencia;
     }
 
-    public void agregarExperienciaLaboral(){
-        var id = new IdEducacion();
-        appendChange(new ExperienciaLaboralAgregada()).apply();
+    public void agregarExperienciaLaboral(Institucion institucion, Periodo periodo, ConocimientosAdquiridos conocimientosAdquiridos){
+        var id = new IdExperienciaLaboral();
+        appendChange(new ExperienciaLaboralAgregada(id,institucion,periodo,conocimientosAdquiridos)).apply();
     }
 
     public void eliminarExperienciaLaboral(IdExperienciaLaboral idExperienciaLaboral){

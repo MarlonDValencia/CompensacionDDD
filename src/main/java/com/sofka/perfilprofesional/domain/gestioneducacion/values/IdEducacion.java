@@ -8,7 +8,6 @@ public class IdEducacion extends Identity {
     }
 
     public IdEducacion(){
-
     }
 
     public static IdEducacion of(String value){
