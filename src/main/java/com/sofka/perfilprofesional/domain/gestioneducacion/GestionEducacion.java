@@ -12,7 +12,6 @@ import com.sofka.perfilprofesional.domain.gestioneducacion.values.IdEducacion;
 import com.sofka.perfilprofesional.domain.gestioneducacion.values.IdGestionEducacion;
 import com.sofka.perfilprofesional.domain.gestioneducacion.values.TipoEducacion;
 import com.sofka.perfilprofesional.domain.gestioneducacion.values.TipoEstudio;
-import com.sofka.perfilprofesional.domain.perfil.Perfil;
 
 import java.util.List;
 import java.util.Set;

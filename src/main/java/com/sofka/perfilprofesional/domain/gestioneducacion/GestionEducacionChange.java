@@ -1,16 +1,8 @@
 package com.sofka.perfilprofesional.domain.gestioneducacion;
 
 import co.com.sofka.domain.generic.EventChange;
-import com.sofka.perfilprofesional.domain.generics.IdHojaDeVida;
-import com.sofka.perfilprofesional.domain.generics.Institucion;
-import com.sofka.perfilprofesional.domain.generics.Periodo;
 import com.sofka.perfilprofesional.domain.gestioneducacion.events.GestionEducacionCreada;
 import com.sofka.perfilprofesional.domain.gestioneducacion.events.*;
-import com.sofka.perfilprofesional.domain.gestioneducacion.values.IdEducacion;
-import com.sofka.perfilprofesional.domain.gestioneducacion.values.TipoEducacion;
-import com.sofka.perfilprofesional.domain.gestioneducacion.values.TipoEstudio;
-import com.sofka.perfilprofesional.domain.perfil.Perfil;
-import com.sofka.perfilprofesional.domain.perfil.Referencia;
 
 import java.util.Objects;
 

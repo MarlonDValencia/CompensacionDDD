@@ -12,7 +12,7 @@ public class TipoEstudio implements ValueObject<String> {
     }
 
     public TipoEstudio modificarTipoEstudio(String tipoEstudio){
-        return new TipoEstudio(tipoDeEstudio);
+        return new TipoEstudio(tipoEstudio);
     }
 
     @Override
