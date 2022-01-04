@@ -28,7 +28,7 @@ public class PerfilChange extends EventChange {
 
         apply((ReferenciaEliminada event)->{
             var IdReferencia = event.getIdReferencia();
-            perfil.referencias.removeIf(item -> item.identity().equals(getIdReferencia));
+            perfil.referencias.removeIf(item -> item.identity().equals(IdReferencia));
         });
     }
 }

@@ -4,7 +4,6 @@ import co.com.sofka.domain.generic.DomainEvent;
 import com.sofka.perfilprofesional.domain.generics.IdHojaDeVida;
 import com.sofka.perfilprofesional.domain.generics.InfoContacto;
 import com.sofka.perfilprofesional.domain.perfil.values.FotoDePerfil;
-import com.sofka.perfilprofesional.domain.perfil.values.IdPerfil;
 
 public class PerfilCreado extends DomainEvent {
     private final IdHojaDeVida idHojaDeVida;
