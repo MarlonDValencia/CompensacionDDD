@@ -8,7 +8,6 @@ public class IdReferencia extends Identity {
     }
 
     public IdReferencia(){
-
     }
 
     public static IdReferencia of(String value){

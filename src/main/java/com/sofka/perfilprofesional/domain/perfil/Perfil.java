@@ -38,9 +38,9 @@ public class Perfil extends AggregateEvent<IdPerfil>{
         return perfil;
     }
 
-    public void agregarNuevaReferencia(IdReferencia idReferencia,InfoContacto infoContacto,NombreCompleto nombreCompleto){
+    public void agregarNuevaReferencia(InfoContacto infoContacto,NombreCompleto nombreCompleto){
         var id = new IdReferencia();
-        appendChange(new NuevaReferenciaAgregada(idReferencia,infoContacto,nombreCompleto)).apply();
+        appendChange(new NuevaReferenciaAgregada(id,infoContacto,nombreCompleto)).apply();
     }
 
     public void eliminarReferencia(IdReferencia idReferencia){
