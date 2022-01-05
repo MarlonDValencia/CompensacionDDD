@@ -2,6 +2,7 @@ package com.sofka.perfilprofesional.domain.experiencia.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofka.perfilprofesional.domain.experiencia.values.ConocimientosAdquiridos;
+import com.sofka.perfilprofesional.domain.experiencia.values.IdExperiencia;
 import com.sofka.perfilprofesional.domain.experiencia.values.IdExperienciaLaboral;
 import com.sofka.perfilprofesional.domain.generics.Institucion;
 import com.sofka.perfilprofesional.domain.generics.Periodo;

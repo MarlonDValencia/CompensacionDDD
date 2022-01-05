@@ -9,6 +9,7 @@ import com.sofka.perfilprofesional.domain.generics.Periodo;
 import java.util.Objects;
 
 public class ExperienciaLaboral extends Entity<IdExperienciaLaboral> {
+
     private final Institucion institucion;
     private final Periodo periodo;
     private ConocimientosAdquiridos conocimientosAdquiridos;
