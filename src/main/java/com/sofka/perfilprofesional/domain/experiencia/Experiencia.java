@@ -19,7 +19,7 @@ public class Experiencia extends AggregateEvent<IdExperiencia> {
     protected IdHojaDeVida idHojaDeVida;
     protected  Set<ExperienciaLaboral> experienciaLaboral;
 
-    public Experiencia(IdExperiencia idExperiencia, IdHojaDeVida idHojaDeVida, Set<ExperienciaLaboral> experienciaLaboral){
+    public Experiencia(IdExperiencia idExperiencia, IdHojaDeVida idHojaDeVida, ExperienciaLaboral experienciaLaboral){
         super(idExperiencia);
         subscribe(new ExperienciaChange(this));
         appendChange(new ExperienciaCreada(idHojaDeVida, experienciaLaboral)).apply();

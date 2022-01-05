@@ -8,6 +8,7 @@ import com.sofka.perfilprofesional.domain.perfil.commands.CrearPerfilCommand;
 import com.sofka.perfilprofesional.domain.perfil.events.PerfilCreado;
 import com.sofka.perfilprofesional.domain.perfil.values.FotoDePerfil;
 import com.sofka.perfilprofesional.domain.perfil.values.IdPerfil;
+import com.sofka.perfilprofesional.usecase.perfil.CrearPerfilUseCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

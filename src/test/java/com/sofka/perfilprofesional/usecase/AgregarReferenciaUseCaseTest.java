@@ -11,6 +11,7 @@ import com.sofka.perfilprofesional.domain.perfil.events.PerfilCreado;
 import com.sofka.perfilprofesional.domain.perfil.values.FotoDePerfil;
 import com.sofka.perfilprofesional.domain.perfil.values.IdPerfil;
 import com.sofka.perfilprofesional.domain.perfil.values.IdReferencia;
+import com.sofka.perfilprofesional.usecase.perfil.AgregarReferenciaUseCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

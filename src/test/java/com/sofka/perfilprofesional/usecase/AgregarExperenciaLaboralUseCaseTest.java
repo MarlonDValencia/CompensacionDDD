@@ -14,6 +14,7 @@ import com.sofka.perfilprofesional.domain.experiencia.values.IdExperienciaLabora
 import com.sofka.perfilprofesional.domain.generics.IdHojaDeVida;
 import com.sofka.perfilprofesional.domain.generics.Institucion;
 import com.sofka.perfilprofesional.domain.generics.Periodo;
+import com.sofka.perfilprofesional.usecase.experiencia.AgregarExperienciaLaboralUseCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -68,12 +69,15 @@ class AgregarExperenciaLaboralUseCaseTest {
 
     private List<DomainEvent> events() {
         IdExperienciaLaboral idExperienciaLaboral = IdExperienciaLaboral.of("yyyyy");
+
         Institucion institucion = new Institucion("Maria Jesús Mejía");
         Date date1 = new Date();
         Date date2 = new Date();
         Periodo periodo = new Periodo(date1,date2);
-        Set<ExperienciaLaboral> set = new HashSet<>();
+        ConocimientosAdquiridos conocimientosAdquiridos = new ConocimientosAdquiridos("Matemáticas");
+
+        ExperienciaLaboral experienciaLaboral = new ExperienciaLaboral(idExperienciaLaboral,institucion,periodo,conocimientosAdquiridos);
         return List.of(new ExperienciaCreada(
-                IdHojaDeVida.of("xxxxx"),set ));
+                IdHojaDeVida.of("xxxxx"),experienciaLaboral ));
     }
 }

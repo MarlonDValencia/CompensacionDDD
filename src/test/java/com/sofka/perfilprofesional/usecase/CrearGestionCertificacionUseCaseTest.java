@@ -2,7 +2,6 @@ package com.sofka.perfilprofesional.usecase;
 
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
-import com.sofka.perfilprofesional.domain.colaborador.events.ColaboradorCreado;
 import com.sofka.perfilprofesional.domain.generics.IdHojaDeVida;
 import com.sofka.perfilprofesional.domain.generics.Institucion;
 import com.sofka.perfilprofesional.domain.generics.Periodo;
@@ -12,6 +11,7 @@ import com.sofka.perfilprofesional.domain.gestioncertificacion.events.GestionCer
 import com.sofka.perfilprofesional.domain.gestioncertificacion.values.IdCertificacion;
 import com.sofka.perfilprofesional.domain.gestioncertificacion.values.IdGestionCertificacion;
 import com.sofka.perfilprofesional.domain.gestioncertificacion.values.NombreCertificacion;
+import com.sofka.perfilprofesional.usecase.gestioneducacion.CrearGestionCertificacionUseCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

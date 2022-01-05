@@ -8,15 +8,15 @@ import java.util.Set;
 
 public class ExperienciaCreada extends DomainEvent {
     private final IdHojaDeVida idHojaDeVida;
-    private final Set<ExperienciaLaboral> experienciaLaboral;
+    private final ExperienciaLaboral experienciaLaboral;
 
-    public ExperienciaCreada(IdHojaDeVida idHojaDeVida, Set<ExperienciaLaboral> experienciaLaboral) {
+    public ExperienciaCreada(IdHojaDeVida idHojaDeVida, ExperienciaLaboral experienciaLaboral) {
         super("sofka.perfilprofesional.experienciacreada");
         this.idHojaDeVida = idHojaDeVida;
         this.experienciaLaboral = experienciaLaboral;
     }
 
-    public Set<ExperienciaLaboral> getExperienciaLaboral() {
+    public ExperienciaLaboral getExperienciaLaboral() {
         return experienciaLaboral;
     }
 

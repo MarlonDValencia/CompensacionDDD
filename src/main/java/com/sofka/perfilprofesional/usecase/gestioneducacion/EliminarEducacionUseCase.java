@@ -1,4 +1,4 @@
-package com.sofka.perfilprofesional.usecase;
+package com.sofka.perfilprofesional.usecase.gestioneducacion;
 
 import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.support.RequestCommand;
