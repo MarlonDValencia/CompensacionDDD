@@ -6,7 +6,6 @@ import com.sofka.perfilprofesional.domain.colaborador.events.ColaboradorCreado;
 import com.sofka.perfilprofesional.domain.colaborador.values.*;
 import com.sofka.perfilprofesional.domain.generics.IdHojaDeVida;
 import com.sofka.perfilprofesional.domain.generics.NombreCompleto;
-import com.sofka.perfilprofesional.domain.hojadevida.events.values.*;
 
 import java.util.List;
 

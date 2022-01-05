@@ -1,14 +1,14 @@
 package com.sofka.perfilprofesional.domain.colaborador.commands;
 
 import co.com.sofka.domain.generic.Command;
-import com.sofka.perfilprofesional.domain.colaborador.values.Area;
-import com.sofka.perfilprofesional.domain.colaborador.values.Cedula;
-import com.sofka.perfilprofesional.domain.colaborador.values.FechaNacimiento;
-import com.sofka.perfilprofesional.domain.colaborador.values.Genero;
+import com.sofka.perfilprofesional.domain.colaborador.values.*;
 import com.sofka.perfilprofesional.domain.generics.IdHojaDeVida;
 import com.sofka.perfilprofesional.domain.generics.NombreCompleto;
 
+import java.util.Objects;
+
 public class CrearColaboradorCommand extends Command {
+    public IdColaborador idColaborador;
     public IdHojaDeVida idHojaDeVida;
     public FechaNacimiento fechaNacimiento;
     public NombreCompleto nombreCompleto;
@@ -16,13 +16,18 @@ public class CrearColaboradorCommand extends Command {
     public Genero genero;
     public Area area;
 
-    public CrearColaboradorCommand(IdHojaDeVida idHojaDeVida, FechaNacimiento fechaNacimiento, NombreCompleto nombreCompleto, Cedula cedula, Genero genero, Area area) {
-        this.idHojaDeVida = idHojaDeVida;
-        this.fechaNacimiento = fechaNacimiento;
-        this.nombreCompleto = nombreCompleto;
-        this.cedula = cedula;
-        this.genero = genero;
-        this.area = area;
+    public CrearColaboradorCommand(IdColaborador idColaborador,IdHojaDeVida idHojaDeVida, FechaNacimiento fechaNacimiento, NombreCompleto nombreCompleto, Cedula cedula, Genero genero, Area area) {
+        this.idColaborador = Objects.requireNonNull(idColaborador);
+        this.idHojaDeVida = Objects.requireNonNull(idHojaDeVida);
+        this.fechaNacimiento = Objects.requireNonNull(fechaNacimiento);
+        this.nombreCompleto = Objects.requireNonNull(nombreCompleto);
+        this.cedula = Objects.requireNonNull(cedula);
+        this.genero = Objects.requireNonNull(genero);
+        this.area = Objects.requireNonNull(area);
+    }
+
+    public IdColaborador getIdColaborador() {
+        return idColaborador;
     }
 
     public IdHojaDeVida getIdHojaDeVida() {
