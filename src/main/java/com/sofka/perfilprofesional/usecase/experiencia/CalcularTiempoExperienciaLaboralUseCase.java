@@ -8,7 +8,7 @@ import com.sofka.perfilprofesional.domain.experiencia.events.ExperienciaCreada;
 import com.sofka.perfilprofesional.domain.experiencia.values.IdExperiencia;
 import com.sofka.perfilprofesional.usecase.service.CalcularPeriodoService;
 
-import java.util.Date;
+import java.util.List;
 
 public class CalcularTiempoExperienciaLaboralUseCase extends UseCase<TriggeredEvent<ExperienciaCreada>, ResponseEvents> {
     @Override
@@ -26,5 +26,6 @@ public class CalcularTiempoExperienciaLaboralUseCase extends UseCase<TriggeredEv
         if (tiempoLaborado <= 0) {
             throw new BusinessException(event.aggregateRootId(), "El tiempo laborado debe ser mayor a cero para ser considerado experiencia laboral");
         }
+        emit().onResponse(new ResponseEvents(List.of()));
     }
 }
