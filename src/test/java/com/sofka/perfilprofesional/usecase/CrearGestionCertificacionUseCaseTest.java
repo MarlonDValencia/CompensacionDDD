@@ -42,8 +42,8 @@ class CrearGestionCertificacionUseCaseTest {
         var events = UseCaseHandler.getInstance()
                 .syncExecutor(useCase, new RequestCommand<>(command))
                 .orElseThrow();
-        //Asserts
         GestionCertificacionCreada event = (GestionCertificacionCreada)events.getDomainEvents().get(0);
+        //Asserts
         Assertions.assertEquals( "xxxxx", event.aggregateRootId());
         Assertions.assertEquals( "Platzi Js Course", event.getCertificacion().nombreCertificacion().value());
     }

@@ -1,7 +1,7 @@
-package com.sofka.perfilprofesional.domain.hojadevida;
+package com.sofka.perfilprofesional.domain.perfil.hojadevida;
 
 import co.com.sofka.domain.generic.EventChange;
-import com.sofka.perfilprofesional.domain.hojadevida.events.HojaDeVidaCreada;
+import com.sofka.perfilprofesional.domain.perfil.hojadevida.events.HojaDeVidaCreada;
 
 public class HojaDeVidaChange extends EventChange {
     public HojaDeVidaChange(HojaDeVida hojaDeVida){

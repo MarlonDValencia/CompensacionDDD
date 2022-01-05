@@ -4,10 +4,6 @@ import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.domain.generic.DomainEvent;
-import com.sofka.perfilprofesional.domain.experiencia.ExperienciaLaboral;
-import com.sofka.perfilprofesional.domain.experiencia.events.ExperienciaCreada;
-import com.sofka.perfilprofesional.domain.experiencia.events.ExperienciaLaboralAgregada;
-import com.sofka.perfilprofesional.domain.experiencia.values.IdExperienciaLaboral;
 import com.sofka.perfilprofesional.domain.generics.*;
 import com.sofka.perfilprofesional.domain.perfil.commands.AgregarReferenciaCommand;
 import com.sofka.perfilprofesional.domain.perfil.events.NuevaReferenciaAgregada;
@@ -21,11 +17,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import static org.mockito.Mockito.when;
 

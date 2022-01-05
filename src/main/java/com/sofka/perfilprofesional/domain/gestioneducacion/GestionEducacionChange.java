@@ -4,11 +4,13 @@ import co.com.sofka.domain.generic.EventChange;
 import com.sofka.perfilprofesional.domain.gestioneducacion.events.GestionEducacionCreada;
 import com.sofka.perfilprofesional.domain.gestioneducacion.events.*;
 
+import java.util.HashSet;
 import java.util.Objects;
 
 public class GestionEducacionChange extends EventChange {
     public GestionEducacionChange(GestionEducacion gestionEducacion){
         apply((GestionEducacionCreada event) -> {
+            gestionEducacion.educaciones = new HashSet<>();
             gestionEducacion.idHojaDeVida = Objects.requireNonNull(event.getIdHojaDeVida());
         });
 

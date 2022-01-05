@@ -1,4 +1,4 @@
-package com.sofka.perfilprofesional.domain.hojadevida.events;
+package com.sofka.perfilprofesional.domain.perfil.hojadevida.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofka.perfilprofesional.domain.generics.IdHojaDeVida;
