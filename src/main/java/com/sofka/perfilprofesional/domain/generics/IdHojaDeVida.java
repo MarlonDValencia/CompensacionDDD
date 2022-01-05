@@ -1,4 +1,6 @@
 package com.sofka.perfilprofesional.domain.generics;
 
-public class IdHojaDeVida {
+import co.com.sofka.domain.generic.Identity;
+
+public class IdHojaDeVida extends Identity {
 }
