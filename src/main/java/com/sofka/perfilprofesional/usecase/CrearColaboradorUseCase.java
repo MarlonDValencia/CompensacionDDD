@@ -16,21 +16,7 @@ public class CrearColaboradorUseCase extends UseCase<RequestCommand<CrearColabor
     @Override
     public void executeUseCase(RequestCommand<CrearColaboradorCommand> requestCommand) {
         var command = requestCommand.getCommand();
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
-        Date firstDate = new Date();
-        try {
-            firstDate = sdf.parse(new Date().toString());
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        Date secondDate = new Date();
-        try {
-            secondDate = sdf.parse(String.valueOf(command.getFechaNacimiento()));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        long diff = secondDate.getTime() - firstDate.getTime();
-        if (diff < 6.570) {
+        if (command.getFechaNacimiento().value().after(new Date(2004,1,1))) {
             throw new BusinessException(command.getFechaNacimiento().value().toString(), "El colaborador debe tener minimo 18 años");
         }
         var colaborador = new Colaborador(command.getIdColaborador(),

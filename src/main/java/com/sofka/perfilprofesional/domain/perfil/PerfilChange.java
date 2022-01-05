@@ -8,12 +8,14 @@ import com.sofka.perfilprofesional.domain.perfil.events.PerfilCreado;
 import com.sofka.perfilprofesional.domain.perfil.events.ReferenciaEliminada;
 import com.sofka.perfilprofesional.domain.perfil.values.FotoDePerfil;
 
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
 public class PerfilChange extends EventChange {
     public PerfilChange(Perfil perfil){
         apply((PerfilCreado event) -> {
+            perfil.referencias = new HashSet<>();
             perfil.idHojaDeVida = Objects.requireNonNull(event.getIdHojaDeVida());
             perfil.fotoDePerfil = Objects.requireNonNull(event.getFotoDePerfil());
             perfil.infoContacto = Objects.requireNonNull(event.getInfoContacto());

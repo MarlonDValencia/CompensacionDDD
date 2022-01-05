@@ -6,7 +6,6 @@ import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
 import com.sofka.perfilprofesional.domain.gestioncertificacion.GestionCertificacion;
 import com.sofka.perfilprofesional.domain.gestioncertificacion.commands.CrearGestionCertificacionCommand;
-import com.sofka.perfilprofesional.domain.perfil.commands.CrearPerfilCommand;
 
 import java.util.Date;
 

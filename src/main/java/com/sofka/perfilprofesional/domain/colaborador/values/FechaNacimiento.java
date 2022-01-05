@@ -11,7 +11,7 @@ public class FechaNacimiento implements ValueObject<Date> {
 
     public FechaNacimiento(Date fecha){
         this.fecha = Objects.requireNonNull(fecha);
-        if(fecha.after(new Date(Instant.now().toEpochMilli()))){
+        if(fecha.before(new Date())){
             throw new IllegalArgumentException("No puedes poner una fecha futura");
         }
     }

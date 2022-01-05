@@ -14,11 +14,11 @@ public class Periodo implements ValueObject<Periodo.Properties> {
         this.fechaInicio = Objects.requireNonNull(fechaInicio, "La fecha de inicio no puede ser nulo");
         this.fechaFin = Objects.requireNonNull(fechaFin, "La fecha final no puede ser nulo");
 
-        if(fechaInicio.before(fechaFin)){
+        if(fechaInicio.after(fechaFin)){
             throw new IllegalArgumentException("La fecha de inicio no puede ser anterior a la fecha final");
         }
 
-        if(fechaFin.after(fechaInicio)){
+        if(fechaFin.before(fechaInicio)){
             throw new IllegalArgumentException("La fecha de fin no puede ser posterior a la fecha inicial");
         }
     }

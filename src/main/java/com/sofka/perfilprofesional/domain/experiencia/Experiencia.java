@@ -17,11 +17,12 @@ import java.util.Set;
 
 public class Experiencia extends AggregateEvent<IdExperiencia> {
     protected IdHojaDeVida idHojaDeVida;
-    protected Set<ExperienciaLaboral> experienciaLaboral;
+    protected  Set<ExperienciaLaboral> experienciaLaboral;
+
     public Experiencia(IdExperiencia idExperiencia, IdHojaDeVida idHojaDeVida, Set<ExperienciaLaboral> experienciaLaboral){
         super(idExperiencia);
         subscribe(new ExperienciaChange(this));
-        appendChange(new ExperienciaCreada(idHojaDeVida)).apply();
+        appendChange(new ExperienciaCreada(idHojaDeVida, experienciaLaboral)).apply();
     }
 
     private Experiencia(IdExperiencia idExperiencia){
