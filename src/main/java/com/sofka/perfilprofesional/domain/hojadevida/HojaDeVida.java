@@ -1,9 +1,9 @@
-package com.sofka.perfilprofesional.domain.perfil.hojadevida;
+package com.sofka.perfilprofesional.domain.hojadevida;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofka.perfilprofesional.domain.generics.IdHojaDeVida;
-import com.sofka.perfilprofesional.domain.perfil.hojadevida.events.HojaDeVidaCreada;
+import com.sofka.perfilprofesional.domain.hojadevida.events.HojaDeVidaCreada;
 
 import java.util.List;
 
